@@ -1,0 +1,149 @@
+/* Body styling with gradient animation */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(-45deg, #1d3557, #457b9d, #a8dadc, #f1faee);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Audio uploader container */
+.audio-uploader {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.audio-uploader:hover {
+  transform: translateY(-10px);
+}
+
+/* Headings */
+.audio-uploader h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.audio-uploader h3 {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #d9e3f0;
+}
+
+/* Styled input for file upload */
+.audio-uploader input[type="file"] {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  border: 2px solid #2a9d8f;
+  border-radius: 50px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.audio-uploader input[type="file"]:hover {
+  border-color: #1f776c;
+  background: #e8f5f2;
+}
+
+/* Buttons with hover and active effects */
+.audio-uploader button {
+  background: linear-gradient(90deg, #1d976c, #93f9b9);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.audio-uploader button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+}
+
+.audio-uploader button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Processed files list */
+.audio-uploader ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.audio-uploader li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 20px;
+  border-radius: 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.audio-uploader li:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.audio-uploader li a {
+  color: #2a9d8f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.audio-uploader li a:hover {
+  color: #1f776c;
+  text-decoration: underline;
+}
+
+/* Footer with subtle glow effect */
+.audio-uploader footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #d9e3f0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Add glowing focus effect */
+.audio-uploader button:focus,
+.audio-uploader input[type="file"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #2a9d8f, 0 0 20px #1f776c;
+}

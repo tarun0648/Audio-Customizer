@@ -1,0 +1,1 @@
+MONGO_URI=mongodb+srv://<adityavenkatesh2397>:<7k8g3KaeJPS8ji7l>@cluster0.mongodb.net/audio-customizer?retryWrites=true&w=majority
